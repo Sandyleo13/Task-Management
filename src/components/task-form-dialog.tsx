@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, Check, Circle, Clock, AlertCircle } from "lucide-react";
+import { CalendarIcon, Check, Circle, Clock, AlertCircle, CheckCircle } from "lucide-react"; // Added CheckCircle
 
 import { Button } from "@/components/ui/button";
 import {
@@ -57,7 +57,7 @@ interface TaskFormDialogProps {
 const statusOptions: { value: TaskStatus; label: string; icon: React.ElementType }[] = [
   { value: 'todo', label: 'To Do', icon: Circle },
   { value: 'in-progress', label: 'In Progress', icon: Clock },
-  { value: 'done', label: 'Done', icon: CheckCircle },
+  { value: 'done', label: 'Done', icon: CheckCircle }, // Fixed: CheckCircle is now imported
   { value: 'backlog', label: 'Backlog', icon: AlertCircle },
 ];
 
