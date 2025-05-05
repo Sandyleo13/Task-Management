@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
@@ -175,6 +174,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-4 md:p-6 lg:p-8 max-w-5xl"> {/* Slightly wider max-width */}
+      <Header />
       <header className="mb-8 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-1">TaskFlow</h1>
         <p className="text-base text-muted-foreground">Organize and conquer your tasks with AI prioritization.</p>
@@ -258,5 +258,13 @@ export default function Home() {
         existingTaskIds={allTaskIds} // Pass all task IDs for dependency selection
       />
     </div>
+  );
+}
+
+function Header() {
+  return (
+    <header className="flex items-center p-4">
+      <h1 className="ml-2 text-xl font-bold">TaskFlow</h1>
+    </header>
   );
 }

@@ -7,6 +7,9 @@ import { Toaster } from '@/components/ui/toaster'; // Import Toaster
 export const metadata: Metadata = {
   title: 'TaskFlow', // Update title
   description: 'Organize and conquer your tasks with AI-powered prioritization.', // Update description
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
